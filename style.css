@@ -1,0 +1,38 @@
+*{
+    background: white;
+}
+body{
+    margin:0;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    background: black;
+    height: 6%;
+}
+li{
+    list-style-type: none;
+    width:5%;
+    color: white;
+    background: black;
+    height: 6%;
+    font-size: 20px;
+}
+.items{
+
+    background-repeat: no-repeat;
+    height: 200px;
+    background-size: cover;
+    width: 20%;
+    margin: 10px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+button{
+    border: 2px solid black;
+}
