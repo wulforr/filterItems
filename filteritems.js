@@ -22,11 +22,15 @@ var item12 = new item('Dal Makhani','veg','maincourse','12.jpeg');
 var arr=[item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12];
 var arr1=[];
 var divItems = document.querySelectorAll(".items");
+
+function displayAll(){
 for(var i=0;i<divItems.length;i++)
 {
-   
+    divItems[i].style.display="block";
     divItems[i].style.backgroundImage = "url(" + arr[i].src + ")";
 }
+}
+displayAll();
 //functionality of search 
 
 var search=document.getElementById("search");
@@ -134,14 +138,23 @@ function borderStyle(){
     starterFilter.style.border="2px solid black";
     maincourseFilter.style.border="2px solid black";
     riceFilter.style.border="2px solid black";
+    allFilter.style.border="2px solid black";
 }
 //functionality of filter buttons
+var allFilter= document.getElementById("allFilter");
 var vegFilter= document.getElementById("vegFilter");
 var nonvegFilter = document.getElementById("nonvegFilter");
 var starterFilter = document.getElementById("starterFilter");
 var maincourseFilter = document.getElementById("maincourseFilter");
 var riceFilter = document.getElementById("riceFilter");
 
+allFilter.addEventListener("click",function(){
+    displayAll();
+    borderStyle();
+    vegFilter.style.border="2px solid black";
+    nonvegFilter.style.border="2px solid black";
+    allFilter.style.border="2px solid red";
+})
 vegFilter.addEventListener("click",function()
 {
     borderStyle();

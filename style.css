@@ -13,11 +13,11 @@ nav{
 }
 li{
     list-style-type: none;
-    width:5%;
     color: white;
     background: black;
     height: 6%;
     font-size: 20px;
+    margin: 4px;
 }
 .items{
     background-repeat: no-repeat;
@@ -26,6 +26,7 @@ li{
     width: 20%;
     margin: 10px;
     box-shadow: 0px 4px 8px 0 grey;
+    border-radius: 2px;
 }
 .main{
     display: flex;
