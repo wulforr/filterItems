@@ -1,5 +1,5 @@
 *{
-    background: white;
+    background-color: white;
 }
 body{
     margin:0;
@@ -42,6 +42,7 @@ button{
     max-width: 70%;
     margin: 0 auto;
     margin-bottom: 4px;
+    padding-left: 35%;
 }
 input[type="text"]{
     border-radius: 8px;
@@ -50,7 +51,6 @@ input[type="text"]{
     height:30px;
     padding-left: 4px;
     margin: 4px;
-    margin-left:25%;
 }
 #search{
     height:30px;
@@ -75,4 +75,24 @@ input[type="text"]{
     border:2px solid black;
     padding: 4px;
     margin: 4px;    
+}
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+#modalContent{
+    margin:8% auto;
+    border: 2px solid red;
+    padding: 20px;
+    width: 70%;
+    height: 70%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*background-image: url(1.jpeg);*/
 }

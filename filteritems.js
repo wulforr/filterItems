@@ -1,4 +1,5 @@
 //array of items
+//here each item is an object
 function item(name,category,type,src)
 {
     this.name=name;
@@ -21,8 +22,9 @@ var item12 = new item('Dal Makhani','veg','maincourse','12.jpeg');
 
 var arr=[item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12];
 var arr1=[];
+//selecting all image divs from html
 var divItems = document.querySelectorAll(".items");
-
+//to display the images of each food
 function displayAll(){
 for(var i=0;i<divItems.length;i++)
 {
@@ -139,6 +141,7 @@ function borderStyle(){
     maincourseFilter.style.border="2px solid black";
     riceFilter.style.border="2px solid black";
     allFilter.style.border="2px solid black";
+    document.querySelector("input[type='text']").value = "";
 }
 //functionality of filter buttons
 var allFilter= document.getElementById("allFilter");
@@ -187,4 +190,17 @@ riceFilter.addEventListener("click",function()
     riceFilter.style.border="2px solid red";
     typeFilter("Rice");
 })
+var modal = document.getElementById("modal");
+var modalContent = document.getElementById("modalContent");
 
+
+for(i=0;i<divItems.length;i++)
+{ 
+
+    divItems[i].addEventListener("click",function(){
+        modal.style.display = "block";
+        modalContent.style.border ="2px solid blue";
+        modalContent.style.backgroundImage =  this.style.backgroundImage;
+    
+    })
+}
