@@ -7,17 +7,23 @@ body{
 nav{
     display: flex;
     flex-direction: row;
-    padding: 1%;
     background: black;
     height: 6%;
+    justify-content: space-between;
 }
-li{
-    list-style-type: none;
+.nav-items{
     color: white;
     background: black;
     height: 6%;
     font-size: 20px;
-    margin: 4px;
+    width: auto;
+    margin: 0;
+    padding: 1%;
+}
+
+#cart:hover{
+    background-color: sienna;
+    
 }
 .items{
     background-repeat: no-repeat;
@@ -95,4 +101,7 @@ input[type="text"]{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /*background-image: url(1.jpeg);*/
+}
+#close{
+    display: none;
 }

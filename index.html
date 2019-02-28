@@ -11,9 +11,13 @@
     <!--nav-->
     <div class="header">
         <nav>
-            <li>logo</li>
-            <li>Food Camp</li>
+            <div class="nav-items">logo</div>
+            <div class="nav-items">Food Camp</div>
+            <div class="nav-items" id="cart">Cart</div>
         </nav>
+    </div>
+    <div id="cartList">
+
     </div>
     <!--Search-->
     <div class="search1">
@@ -23,7 +27,7 @@
     <!--filter-->
     <div class="filter">
         <button id="allFilter">All</button>
-        <button id="vegFilter">Veg</button>
+        <button id="vegFilter" value="1">Veg</button>
         <button id="nonvegFilter">Non-veg</button>
         <button id="starterFilter">Starter</button>
         <button id="maincourseFilter">Main Course</button>
@@ -33,7 +37,7 @@
     <div class="main">
         <div class="items"></div>
         <div class="items"></div>
-        <div class="items"></div>
+        <div class="items" value="3"></div>
         <div class="items"></div>
         <div class="items"></div>
         <div class="items"></div>
@@ -45,6 +49,7 @@
         <div class="items"></div>
     </div>
     <div id="modal">
+        <button id="close">X</button>
         <div id="modalContent">
             
         </div>

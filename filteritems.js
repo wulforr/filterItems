@@ -22,6 +22,8 @@ var item12 = new item('Dal Makhani','veg','maincourse','12.jpeg');
 
 var arr=[item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12];
 var arr1=[];
+var arr3=[];
+
 //selecting all image divs from html
 var divItems = document.querySelectorAll(".items");
 //to display the images of each food
@@ -30,6 +32,7 @@ for(var i=0;i<divItems.length;i++)
 {
     divItems[i].style.display="block";
     divItems[i].style.backgroundImage = "url(" + arr[i].src + ")";
+    divItems[i].textContent=arr[i].name;
 }
 }
 displayAll();
@@ -192,15 +195,46 @@ riceFilter.addEventListener("click",function()
 })
 var modal = document.getElementById("modal");
 var modalContent = document.getElementById("modalContent");
+var close = document.getElementById("close");
+var cartList = document.getElementById("cartList");
 
 
 for(i=0;i<divItems.length;i++)
 { 
 
-    divItems[i].addEventListener("click",function(){
+    divItems[i].addEventListener("click",function(i){
         modal.style.display = "block";
         modalContent.style.border ="2px solid blue";
         modalContent.style.backgroundImage =  this.style.backgroundImage;
-    
+        arr3.push(this.textContent);
+        close.style.display="block";
+        var newItem = document.createElement("div");
+        var t  = document.createTextNode(arr3[i].category);
+        newItem.appendChild(t);
+        cartList.appendChild(newItem);
     })
 }
+close.addEventListener("click",function(){
+    modal.style.display = "none";
+    close.style.display = "none";
+})
+
+
+//functionality of cart
+var cart= document.getElementById("cart");
+cart.addEventListener("click",function()
+{
+    for(i=0;i<arr3.length;i++)
+    {
+        for(var j=0;j<arr.length;j++)
+        {
+            if(arr[j].name==arr3[i])
+            {
+                arr3[i] = arr[j];
+            }
+        }
+        
+    }
+    cartList.style.display="block";
+
+})
